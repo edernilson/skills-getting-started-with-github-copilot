@@ -155,23 +155,26 @@ footer {
 }
 
 .activity-card .participants ul {
-  list-style: disc;
-  margin-left: 18px;
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
   max-height: 120px;
   overflow: auto;
   padding-right: 6px;
 }
 
 .activity-card .participants li {
-  padding: 4px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 8px;
   font-size: 14px;
   color: #555;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 .activity-card .participants li:nth-child(odd) {
   background-color: rgba(0, 0, 0, 0.02);
-  padding-left: 6px;
 }
 
 .no-participants {
@@ -179,4 +182,26 @@ footer {
   color: #888;
   font-size: 14px;
   margin: 6px 0 0 0;
+}
+
+.participant-email {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 78%;
+}
+
+.participant-delete {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px 6px;
+  border-radius: 3px;
+}
+
+.participant-delete:hover {
+  background: rgba(198,40,40,0.08);
 }
